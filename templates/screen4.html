@@ -1,0 +1,96 @@
+<div class="screen active" id="screen4">
+    <div class="wechat-header">
+        滴滴出行
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 15px;">
+        <!-- Search section -->
+        <div style="background-color: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 15px;">
+                <div style="font-size: 14px; color: #666; margin-bottom: 8px;">您要去哪里？</div>
+                <div style="background-color: #f8f8f8; padding: 15px; border-radius: 8px; border: 1px solid #e0e0e0; display: flex; align-items: center;">
+                    <span style="color: #999; margin-right: 10px;">🔍</span>
+                    <input type="text" placeholder="输入目的地" style="border: none; background: none; outline: none; flex: 1; font-size: 16px;">
+                </div>
+            </div>
+            
+            <button id="search-btn" class="btn btn-primary" style="width: 100%; height: 45px; font-size: 16px;">
+                搜索目的地
+            </button>
+        </div>
+        
+        <!-- Current location -->
+        <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center;">
+            <span style="font-size: 20px; margin-right: 10px;">📍</span>
+            <div style="flex: 1;">
+                <div style="font-size: 14px; color: #666;">当前位置</div>
+                <div style="font-size: 16px; color: #333; font-weight: 500;">北京市朝阳区</div>
+            </div>
+        </div>
+        
+        <!-- Popular destinations -->
+        <div style="margin-bottom: 20px;">
+            <h3 style="font-size: 16px; margin-bottom: 15px; color: #333;">常用目的地</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <div id="destination-btn" class="car-option" style="cursor: pointer; text-align: center; padding: 15px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🏟️</div>
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">鸟巢</div>
+                    <div style="font-size: 12px; color: #999;">国家体育场</div>
+                </div>
+                <div class="car-option" style="text-align: center; padding: 15px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🏛️</div>
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">天安门</div>
+                    <div style="font-size: 12px; color: #999;">市中心</div>
+                </div>
+                <div class="car-option" style="text-align: center; padding: 15px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🏥</div>
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">协和医院</div>
+                    <div style="font-size: 12px; color: #999;">医疗</div>
+                </div>
+                <div class="car-option" style="text-align: center; padding: 15px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🏬</div>
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">王府井</div>
+                    <div style="font-size: 12px; color: #999;">购物</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent trips -->
+        <div>
+            <h3 style="font-size: 16px; margin-bottom: 15px; color: #333;">最近行程</h3>
+            <div style="background-color: white; border-radius: 8px; border: 1px solid #e0e0e0;">
+                <div style="padding: 15px; border-bottom: 1px solid #f0f0f0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-size: 14px; color: #333; font-weight: 500;">北京站 → 首都机场</div>
+                            <div style="font-size: 12px; color: #999;">昨天 14:30</div>
+                        </div>
+                        <div style="font-size: 14px; color: #07c160;">¥85</div>
+                    </div>
+                </div>
+                <div style="padding: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-size: 14px; color: #333; font-weight: 500;">家 → 超市</div>
+                            <div style="font-size: 12px; color: #999;">3天前 10:15</div>
+                        </div>
+                        <div style="font-size: 14px; color: #07c160;">¥25</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instruction bubble -->
+        <div style="background-color: #e8f5e8; padding: 15px; border-radius: 12px; border-left: 4px solid #07c160; margin-top: 20px;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #07c160; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">绿</div>
+                <div>
+                    <strong style="color: #388e3c; font-size: 14px;">小绿提示：</strong>
+                    <p style="margin-top: 5px; font-size: 13px; color: #388e3c; line-height: 1.4;">
+                        您可以直接点击"鸟巢"作为目的地，或者使用语音输入
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

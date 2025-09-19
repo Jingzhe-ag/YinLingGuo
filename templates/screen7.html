@@ -1,0 +1,82 @@
+<div class="screen active" id="screen7">
+    <div class="wechat-header">
+        确认下单
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 15px;">
+        <!-- Order summary -->
+        <div style="background-color: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 20px;">
+                <div style="font-size: 14px; color: #666; margin-bottom: 4px;">北京市朝阳区建国门外大街</div>
+                <div style="display: flex; align-items: center; margin: 8px 0;">
+                    <div style="width: 2px; height: 20px; background-color: #07c160; margin: 0 10px;"></div>
+                    <div style="font-size: 14px; color: #666;">15公里 · 约30分钟</div>
+                </div>
+                <div style="font-size: 14px; color: #666;">鸟巢 (国家体育场)</div>
+            </div>
+            
+            <div style="border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <div style="font-size: 14px; color: #666;">车型</div>
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">快车</div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 14px; color: #666;">预估价格</div>
+                    <div style="font-size: 18px; color: #ff6b6b; font-weight: bold;">¥45</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Long press instruction -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="font-size: 18px; color: #333; margin-bottom: 10px; font-weight: 500;">长按按钮叫车</div>
+            <div style="font-size: 14px; color: #666;">请长按下方按钮2秒钟确认下单</div>
+        </div>
+        
+        <!-- Long press button -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button id="long-press-btn" class="long-press-btn">
+                <svg class="progress-ring" width="140" height="140">
+                    <circle class="progress-ring-circle" stroke="#07c160" stroke-width="4" fill="transparent" r="70" cx="70" cy="70"/>
+                </svg>
+                叫车
+            </button>
+        </div>
+        
+        <!-- Progress indicator -->
+        <div id="progress-indicator" style="display: none; background-color: #f0f8ff; padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 14px; color: #1976d2; margin-bottom: 5px;">正在确认订单...</div>
+            <div style="width: 100%; background-color: #e0e0e0; border-radius: 10px; height: 6px;">
+                <div id="progress-bar" style="width: 0%; background-color: #07c160; height: 100%; border-radius: 10px; transition: width 2s linear;"></div>
+            </div>
+        </div>
+        
+        <!-- Important notes -->
+        <div style="background-color: #fff3e0; padding: 15px; border-radius: 12px; border-left: 4px solid #ff9800; margin-bottom: 20px;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #ff9800; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">!</div>
+                <div>
+                    <strong style="color: #e65100; font-size: 14px;">重要提醒：</strong>
+                    <ul style="margin-top: 5px; font-size: 13px; color: #e65100; line-height: 1.4; padding-left: 15px;">
+                        <li>下单后请保持电话畅通</li>
+                        <li>司机到达前请完成支付</li>
+                        <li>请核对车牌号后再上车</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instruction bubble -->
+        <div style="background-color: #e3f2fd; padding: 15px; border-radius: 12px; border-left: 4px solid #2196f3;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #2196f3; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">蓝</div>
+                <div>
+                    <strong style="color: #1976d2; font-size: 14px;">小蓝提示：</strong>
+                    <p style="margin-top: 5px; font-size: 13px; color: #1976d2; line-height: 1.4;">
+                        长按"叫车"按钮2秒钟，不要松开，直到进度条完成
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>银龄国打车教学</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Amap API -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=YOUR_AMAP_KEY"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- All screens will be dynamically loaded here -->
+        <div id="screen-container"></div>
+    </div>
+</body>
+</html>

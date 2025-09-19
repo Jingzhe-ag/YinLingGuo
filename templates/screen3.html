@@ -1,0 +1,115 @@
+<div class="screen active" id="screen3">
+    <div class="wechat-header">
+        微信
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 15px;">
+        <!-- Search bar -->
+        <div style="background-color: #f5f5f5; padding: 10px; border-radius: 20px; margin-bottom: 20px; display: flex; align-items: center;">
+            <span style="color: #999; margin-right: 10px;">🔍</span>
+            <span style="color: #999; font-size: 14px;">搜索</span>
+        </div>
+        
+        <!-- Main content area -->
+        <div style="flex: 1; display: flex; flex-direction: column;">
+            <!-- Chat list -->
+            <div style="background-color: white; border-radius: 8px; margin-bottom: 15px;">
+                <div style="padding: 15px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background-color: #07c160; border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">文</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; margin-bottom: 2px;">文件传输助手</div>
+                        <div style="font-size: 12px; color: #999;">欢迎使用微信</div>
+                    </div>
+                    <div style="font-size: 12px; color: #999;">10:30</div>
+                </div>
+                
+                <div style="padding: 15px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background-color: #ff6b6b; border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">家</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; margin-bottom: 2px;">家庭群</div>
+                        <div style="font-size: 12px; color: #999;">花开富贵: 今天天气不错</div>
+                    </div>
+                    <div style="font-size: 12px; color: #999;">09:15</div>
+                </div>
+            </div>
+            
+            <!-- Service options (hidden by default) -->
+            <div id="service-options" style="display: none; background-color: white; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                <h3 style="font-size: 16px; margin-bottom: 15px; color: #333;">服务</h3>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 12px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">💰</div>
+                        <div style="font-size: 12px; color: #666;">钱包</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 12px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">🛒</div>
+                        <div style="font-size: 12px; color: #666;">购物</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 12px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">🎬</div>
+                        <div style="font-size: 12px; color: #666;">视频</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background-color: #f0f0f0; border-radius: 12px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">📚</div>
+                        <div style="font-size: 12px; color: #666;">读书</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+                    <h4 style="font-size: 14px; margin-bottom: 10px; color: #333;">出行服务</h4>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                        <div style="text-align: center;">
+                            <div style="width: 40px; height: 40px; background-color: #4a90e2; border-radius: 8px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">地</div>
+                            <div style="font-size: 12px; color: #666;">出行服务</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 40px; height: 40px; background-color: #07c160; border-radius: 8px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">公</div>
+                            <div style="font-size: 12px; color: #666;">酒店</div>
+                        </div>
+                        <div id="didi-btn" style="text-align: center; cursor: pointer; padding: 10px; border-radius: 8px; background-color: #f8f8f8;">
+                            <div style="width: 40px; height: 40px; background-color: #ff6b6b; border-radius: 8px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">滴</div>
+                            <div style="font-size: 12px; color: #333;">滴滴出行</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 40px; height: 40px; background-color: #07c160; border-radius: 8px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">公</div>
+                            <div style="font-size: 12px; color: #666;">酒店</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instruction bubble -->
+            <div style="background-color: #e3f2fd; padding: 15px; border-radius: 12px; border-left: 4px solid #2196f3;">
+                <div style="display: flex; align-items: flex-start;">
+                    <div style="width: 30px; height: 30px; background-color: #2196f3; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">蓝</div>
+                    <div>
+                        <strong style="color: #1976d2; font-size: 14px;">小蓝提示：</strong>
+                        <p style="margin-top: 5px; font-size: 13px; color: #1976d2; line-height: 1.4;">
+                            点击右下角的"我" → 再点击"服务" → 找到"滴滴出行"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <div class="nav-icon" style="background-color: #07c160;">💬</div>
+            <span>微信</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">👥</div>
+            <span>通讯录</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <span>发现</span>
+        </div>
+        <div id="service-btn" class="nav-item" style="cursor: pointer;">
+            <div class="nav-icon">👤</div>
+            <span>我</span>
+        </div>
+    </div>
+</div>

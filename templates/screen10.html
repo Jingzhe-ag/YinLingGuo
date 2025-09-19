@@ -1,0 +1,182 @@
+<div class="screen active" id="screen10">
+    <div class="wechat-header">
+        到达目的地
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+        <!-- Celebration area -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div class="celebration-text" style="font-size: 32px; color: #07c160; font-weight: bold; margin-bottom: 20px;">
+                🎉 恭喜到达！ 🎉
+            </div>
+            <div style="font-size: 18px; color: #333; margin-bottom: 10px;">
+                您已成功到达鸟巢
+            </div>
+            <div style="font-size: 14px; color: #666;">
+                行程完成，感谢您的使用
+            </div>
+        </div>
+        
+        <!-- Dancing characters -->
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 40px;">
+            <div class="character character-blue dancing"></div>
+            <div class="character character-green dancing"></div>
+        </div>
+        
+        <!-- Trip summary -->
+        <div style="background-color: white; border-radius: 12px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 100%; max-width: 300px;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 14px; color: #666; margin-bottom: 5px;">本次行程</div>
+                <div style="font-size: 24px; color: #ff6b6b; font-weight: bold;">¥45</div>
+            </div>
+            
+            <div style="border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div style="font-size: 12px; color: #666;">距离</div>
+                    <div style="font-size: 12px; color: #333;">15.2公里</div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div style="font-size: 12px; color: #666;">时长</div>
+                    <div style="font-size: 12px; color: #333;">28分钟</div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 12px; color: #666;">支付方式</div>
+                    <div style="font-size: 12px; color: #333;">微信零钱</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Success message -->
+        <div style="background-color: #f0fff4; padding: 15px; border-radius: 12px; border: 1px solid #07c160; margin-bottom: 30px; text-align: center; width: 100%; max-width: 300px;">
+            <div style="font-size: 16px; color: #07c160; font-weight: 500; margin-bottom: 5px;">
+                🌟 学习完成！
+            </div>
+            <div style="font-size: 14px; color: #388e3c;">
+                您已经掌握了微信打车的全部流程
+            </div>
+        </div>
+        
+        <!-- Rating section -->
+        <div style="background-color: #f8f8f8; padding: 20px; border-radius: 12px; margin-bottom: 30px; text-align: center; width: 100%; max-width: 300px;">
+            <div style="font-size: 16px; color: #333; margin-bottom: 15px;">为本次服务评分</div>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                <span style="font-size: 24px; cursor: pointer;">⭐</span>
+                <span style="font-size: 24px; cursor: pointer;">⭐</span>
+                <span style="font-size: 24px; cursor: pointer;">⭐</span>
+                <span style="font-size: 24px; cursor: pointer;">⭐</span>
+                <span style="font-size: 24px; cursor: pointer;">⭐</span>
+            </div>
+            <div style="font-size: 12px; color: #666;">点击星星为司机评分</div>
+        </div>
+    </div>
+    
+    <!-- Celebration modal -->
+    <div id="celebration-modal" class="modal">
+        <div class="modal-content">
+            <div style="text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 20px;">🎊</div>
+                <h2 style="font-size: 24px; color: #333; margin-bottom: 15px;">恭喜您！</h2>
+                <p style="font-size: 16px; color: #666; margin-bottom: 20px; line-height: 1.5;">
+                    您已经成功完成了微信打车教学<br>
+                    现在可以解锁实战模式了！
+                </p>
+                
+                <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="font-size: 14px; color: #1976d2; margin-bottom: 10px;">🚀 实战模式包含：</div>
+                    <div style="text-align: left; font-size: 12px; color: #666;">
+                        <div style="margin-bottom: 5px;">• 真实订单模拟</div>
+                        <div style="margin-bottom: 5px;">• 紧急情况处理</div>
+                        <div style="margin-bottom: 5px;">• 更多车型选择</div>
+                        <div>• 高级功能使用</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="close-modal-btn" class="btn btn-secondary" style="padding: 12px 24px;">
+                        稍后再说
+                    </button>
+                    <button class="btn btn-primary" style="padding: 12px 24px;">
+                        立即体验
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes dance {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(-15deg) scale(1.1);
+            }
+            75% {
+                transform: rotate(15deg) scale(1.1);
+            }
+        }
+        
+        .celebration-text {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .dancing {
+            animation: dance 1s ease-in-out infinite;
+        }
+        
+        /* Confetti animation */
+        @keyframes confetti {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #07c160;
+            animation: confetti 3s linear infinite;
+        }
+        
+        .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background-color: #07c160; }
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background-color: #2196f3; }
+        .confetti:nth-child(3) { left: 30%; animation-delay: 1s; background-color: #ff9800; }
+        .confetti:nth-child(4) { left: 40%; animation-delay: 1.5s; background-color: #e91e63; }
+        .confetti:nth-child(5) { left: 50%; animation-delay: 2s; background-color: #9c27b0; }
+        .confetti:nth-child(6) { left: 60%; animation-delay: 2.5s; background-color: #f44336; }
+        .confetti:nth-child(7) { left: 70%; animation-delay: 0.3s; background-color: #4caf50; }
+        .confetti:nth-child(8) { left: 80%; animation-delay: 0.8s; background-color: #ffeb3b; }
+        .confetti:nth-child(9) { left: 90%; animation-delay: 1.3s; background-color: #00bcd4; }
+        .confetti:nth-child(10) { left: 95%; animation-delay: 1.8s; background-color: #795548; }
+    </style>
+    
+    <!-- Confetti elements -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+</div>

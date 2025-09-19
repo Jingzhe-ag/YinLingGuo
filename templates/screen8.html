@@ -1,0 +1,103 @@
+<div class="screen active" id="screen8">
+    <div class="wechat-header">
+        微信支付
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 15px;">
+        <!-- Order info -->
+        <div style="background-color: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 14px; color: #666; margin-bottom: 10px;">滴滴出行</div>
+                <div style="font-size: 32px; color: #333; font-weight: bold;">¥45.00</div>
+            </div>
+            
+            <div style="border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div style="font-size: 14px; color: #666;">订单号</div>
+                    <div style="font-size: 14px; color: #333;">2024091612345678</div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <div style="font-size: 14px; color: #666;">车型</div>
+                    <div style="font-size: 14px; color: #333;">快车</div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 14px; color: #666;">行程</div>
+                    <div style="font-size: 14px; color: #333;">朝阳区 → 鸟巢</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment methods -->
+        <div style="margin-bottom: 20px;">
+            <h3 style="font-size: 16px; margin-bottom: 15px; color: #333;">选择支付方式</h3>
+            
+            <!-- WeChat Balance -->
+            <div class="payment-method" data-payment="balance">
+                <div class="payment-icon">微</div>
+                <div style="flex: 1;">
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">微信零钱</div>
+                    <div style="font-size: 12px; color: #666;">余额: ¥1,234.56</div>
+                </div>
+                <div style="font-size: 16px; color: #07c160;">✓</div>
+            </div>
+            
+            <!-- Bank Card -->
+            <div class="payment-method" data-payment="card">
+                <div class="payment-icon" style="background-color: #2196f3;">银</div>
+                <div style="flex: 1;">
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">银行卡</div>
+                    <div style="font-size: 12px; color: #666;">**** **** **** 8888</div>
+                </div>
+            </div>
+            
+            <!-- Alipay -->
+            <div class="payment-method" data-payment="alipay">
+                <div class="payment-icon" style="background-color: #1677ff;">支</div>
+                <div style="flex: 1;">
+                    <div style="font-size: 14px; color: #333; font-weight: 500;">支付宝</div>
+                    <div style="font-size: 12px; color: #666;">余额: ¥567.89</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment password -->
+        <div style="background-color: #f8f8f8; padding: 15px; border-radius: 12px; margin-bottom: 20px;">
+            <div style="font-size: 14px; color: #666; margin-bottom: 10px;">支付密码</div>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+                <div style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">•</div>
+            </div>
+            <div style="text-align: center; margin-top: 10px;">
+                <span style="font-size: 12px; color: #2196f3; cursor: pointer;">忘记密码？</span>
+            </div>
+        </div>
+        
+        <!-- Pay button -->
+        <button id="pay-btn" class="btn btn-primary" style="width: 100%; height: 45px; font-size: 16px;">
+            立即支付 ¥45.00
+        </button>
+        
+        <!-- Security notice -->
+        <div style="background-color: #f0f8ff; padding: 12px; border-radius: 8px; margin-top: 15px; display: flex; align-items: center;">
+            <span style="font-size: 16px; margin-right: 8px;">🔒</span>
+            <span style="font-size: 12px; color: #1976d2;">支付环境安全，请放心支付</span>
+        </div>
+        
+        <!-- Instruction bubble -->
+        <div style="background-color: #e8f5e8; padding: 15px; border-radius: 12px; border-left: 4px solid #07c160; margin-top: 20px;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #07c160; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">绿</div>
+                <div>
+                    <strong style="color: #388e3c; font-size: 14px;">小绿提示：</strong>
+                    <p style="margin-top: 5px; font-size: 13px; color: #388e3c; line-height: 1.4;">
+                        选择支付方式后点击"立即支付"，司机到达前完成支付
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

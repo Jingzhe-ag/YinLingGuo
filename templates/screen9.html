@@ -1,0 +1,123 @@
+<div class="screen active" id="screen9">
+    <div class="wechat-header">
+        等待司机
+    </div>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 15px;">
+        <!-- Driver info card -->
+        <div class="driver-card">
+            <div class="driver-avatar" style="background: linear-gradient(135deg, #4a90e2, #357abd); display: flex; align-items: center; justify-content: center; color: white; font-size: 32px;">👨</div>
+            <div style="margin-bottom: 15px;">
+                <div style="font-size: 18px; color: #333; font-weight: 500; margin-bottom: 5px;">王师傅</div>
+                <div style="font-size: 14px; color: #666;">评分: 4.9分 · 接单2341次</div>
+            </div>
+            
+            <div class="license-plate">
+                京A·88888
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <div style="font-size: 14px; color: #666; margin-bottom: 5px;">车辆信息</div>
+                <div style="font-size: 16px; color: #333; font-weight: 500;">丰田凯美瑞 · 白色</div>
+            </div>
+        </div>
+        
+        <!-- Trip status -->
+        <div style="background-color: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 16px; color: #333; margin-bottom: 10px;">司机正在赶来</div>
+                <div style="font-size: 24px; color: #07c160; font-weight: bold;">预计2分钟到达</div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 24px; color: #333; font-weight: bold;">1.2</div>
+                    <div style="font-size: 12px; color: #666;">公里</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 24px; color: #333; font-weight: bold;">2</div>
+                    <div style="font-size: 12px; color: #666;">分钟</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 24px; color: #333; font-weight: bold;">¥45</div>
+                    <div style="font-size: 12px; color: #666;">预估价格</div>
+                </div>
+            </div>
+            
+            <!-- Progress animation -->
+            <div style="text-align: center;">
+                <div class="loading" style="margin: 0 auto 10px;"></div>
+                <div style="font-size: 12px; color: #666;">司机正在赶来的路上...</div>
+            </div>
+        </div>
+        
+        <!-- Action buttons -->
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <button class="btn btn-secondary" style="flex: 1; height: 45px; font-size: 14px;">
+                📞 联系司机
+            </button>
+            <button id="confirm-driver-btn" class="btn btn-primary" style="flex: 1; height: 45px; font-size: 14px;">
+                司机已到达
+            </button>
+        </div>
+        
+        <!-- Safety reminder -->
+        <div style="background-color: #fff3e0; padding: 15px; border-radius: 12px; border-left: 4px solid #ff9800; margin-bottom: 20px;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #ff9800; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">!</div>
+                <div>
+                    <strong style="color: #e65100; font-size: 14px;">安全提醒：</strong>
+                    <ul style="margin-top: 5px; font-size: 13px; color: #e65100; line-height: 1.4; padding-left: 15px;">
+                        <li>请核对车牌号：京A·88888</li>
+                        <li>确认车辆颜色和车型</li>
+                        <li>上车前告知司机目的地</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map preview -->
+        <div style="background-color: #f5f5f5; border-radius: 12px; height: 150px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <div style="text-align: center; color: #999;">
+                <div style="font-size: 32px; margin-bottom: 8px;">🗺️</div>
+                <div style="font-size: 12px;">司机位置实时追踪</div>
+            </div>
+            
+            <!-- Driver position -->
+            <div style="position: absolute; top: 30%; left: 40%; width: 12px; height: 12px; background-color: #ff6b6b; border-radius: 50%; border: 3px solid white; animation: pulse 2s ease-in-out infinite;"></div>
+            
+            <!-- User position -->
+            <div style="position: absolute; bottom: 30%; right: 30%; width: 12px; height: 12px; background-color: #07c160; border-radius: 50%; border: 3px solid white;"></div>
+        </div>
+        
+        <!-- Instruction bubble -->
+        <div style="background-color: #e3f2fd; padding: 15px; border-radius: 12px; border-left: 4px solid #2196f3;">
+            <div style="display: flex; align-items: flex-start;">
+                <div style="width: 30px; height: 30px; background-color: #2196f3; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">蓝</div>
+                <div>
+                    <strong style="color: #1976d2; font-size: 14px;">小蓝提示：</strong>
+                    <p style="margin-top: 5px; font-size: 13px; color: #1976d2; line-height: 1.4;">
+                        司机到达后，请核对车牌号和车辆信息，确认无误后再上车
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</div>
